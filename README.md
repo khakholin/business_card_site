@@ -1,2 +1,2 @@
-# business_card_site
-business card site
+# apartment_assistant
+apartment assistant
