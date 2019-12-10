@@ -4,6 +4,7 @@ function showNav(){
     $('.navigation').addClass('navigation_active');
     $('body').css({'overflow':'hidden'});
     $('.navigation-menu__item').css({'font-size':'24px', 'color':'white'});
+    $('.burger').css({'border-color':'white'});
     if (getBodyScrollTop()/$(window).height()>=0.5 && getBodyScrollTop()/$(window).height()<1.5){
         $('.navigation-menu__item:nth-child(1)').css({'font-size':'29px', 'color':'tomato'});
         curItem = 0;
@@ -25,6 +26,7 @@ function hideNav(){
     $('.burger-line').removeClass('burger_open');
     $('.navigation').removeClass('navigation_active');
     $('body').css({'overflow':'visible'});
+    $('.burger').css({'border-color':'transparent'});
 }
 function getBodyScrollTop(){
     return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
