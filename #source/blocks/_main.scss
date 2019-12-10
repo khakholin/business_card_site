@@ -2,6 +2,8 @@
     background: linear-gradient(0, $bgc-dark, $bgc-light);
     height: 100%;
     width: 100%;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
     &-container{
         height: 100%;
         display: flex;
@@ -113,8 +115,7 @@
         background-color: transparent;
         bottom: 10px;
         left: calc(50% - 20px);
-        -webkit-transition: all 0.5s linear;
-        transition: all 0.5s linear;
+        transition: all 0.5s ease;
         &:hover{
             background-color: rgba(0, 0, 0, 1);
             .main-button__arrow, .main-button__arrow::before, .main-button__arrow::after{
@@ -129,7 +130,7 @@
             left: calc(50% - 1px);
             top: 25%;
             animation: 1.5s 0s linear infinite button;
-            transition: all 0.5s linear;
+            transition: all 0.5s ease;
             &::before{
                 position: absolute;
                 content: '';
@@ -139,7 +140,7 @@
                 left: calc(50% + 3px);
                 top: calc(50% - 1px);
                 transform: rotate(45deg);
-                transition: all 0.5s linear;
+                transition: all 0.5s ease;
             }
             &::after{
                 position: absolute;
@@ -150,7 +151,7 @@
                 left: calc(50% - 5px);
                 top: calc(50% - 1px);
                 transform: rotate(-45deg);
-                transition: all 0.5s linear;
+                transition: all 0.5s ease;
             }
         }
     }

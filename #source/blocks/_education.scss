@@ -1,7 +1,7 @@
 .education{
     height: 100%;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     display: flex;
     justify-content: center;
 }
@@ -15,41 +15,47 @@
         &__left{
 
         }
+        &__right{
+
+        }
         &__middle{
+            display: flex;
+            justify-content: center;
             position: relative;
             padding: 0 28px;
         }
         &__empty{
+            z-index: 1;
             margin: 0 11px;
             height: 150px;
-            width: 2px;
+            width: 1px;
             background: linear-gradient(0, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
         }
+        &__line{
+            position: absolute;
+            height: 150px;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.3);
+            &:before{
+                position: absolute;
+                left: -39px;
+                top: 11px;
+                content: '';
+                height: 1px;
+                width: 39px;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
         &__circle{
-            z-index: 2;
+            position: relative;
+            z-index: 1;
             height: 23px;
             width: 23px;
             border-radius: 50%;
             background-color: rgba($bgc-dark, 0.8);
-            &::before{
-                z-index: 1;
-                position: absolute;
-                top: 11px;
-                left: 0;
-                content: '';
-                height: 2px;
-                width: 50%;
-                background-color: rgba(0, 0, 0, 0.3);
-            }
-            &::after{
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: calc(50% - 1px);
-                content: '';
-                height: 150px;
-                width: 2px;
-                background-color: rgba(0, 0, 0, 0.3);
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(1.2);
             }
         }
         &__left{
@@ -59,32 +65,45 @@
             height: 150px;
         }
     }
-    &__year{
-        width: 114px;
+    &-year{
         position: relative;
+        width: 100%;
         display: flex;
         justify-content: center;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-        padding: 20px 0;
-        &::before{
-            position: absolute;
-            bottom: 26px;
-            left: -11px;
-            content: '';
-            height: 2px;
+        height: 52px;
+        &__line{
             width: 80px;
-            background-color: rgba(0, 0, 0, 0.3);
-            transform: rotate(-45deg);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            width: 61px;
+            &::before{
+                position: absolute;
+                bottom: 25px;
+                left: -15px;
+                content: '';
+                height: 1px;
+                width: 60px;
+                background-color: rgba(0, 0, 0, 0.3);
+                transform: rotate(-60deg);
+            }
+            &::after{
+                position: absolute;
+                bottom: 25px;
+                right: -15px;
+                content: '';
+                height: 1px;
+                width: 60px;
+                background-color: rgba(0, 0, 0, 0.3);
+                transform: rotate(60deg);
+            }
         }
-        &::after{
+        &__title{
             position: absolute;
-            bottom: 26px;
-            right: -11px;
-            content: '';
-            height: 2px;
-            width: 80px;
-            background-color: rgba(0, 0, 0, 0.3);
-            transform: rotate(45deg);
+            top: 60%;
+            @include main-font;
+            color: rgba(0, 0, 0, 0.8);
         }
     }
 }
