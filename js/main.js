@@ -85,4 +85,14 @@ $('.navigation').click(function(event) {
 });
 $('.navigation-menu__item').click(hideNav);
 $('.navigation-social__item').click(hideNav);
-circleHover();
+
+if ($(window).width() > '600'){
+    circleHover();
+}
+var $page = $('html, body');
+$('a[href*="#"]').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
