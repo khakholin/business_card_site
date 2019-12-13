@@ -21,18 +21,18 @@ function menuItemHover(){
     for (let i = 0; i < 5; i++) {
         $('.navigation-menu__item').eq(i).mouseover(function(event){
             if(i != curItem){
-                $('.navigation-menu__item').eq(i).css({'transform':'scale(1.2)'});
+            $('.navigation-menu__item').eq(i).css({'transform':'scale(1.2)'});
             }
         });
         $('.navigation-menu__item').eq(i).mouseout(function(event){
             if(i != curItem){
-                $('.navigation-menu__item').eq(i).css({'transform':'scale(1)'});
+            $('.navigation-menu__item').eq(i).css({'transform':'scale(1)'});
             }
         });
     }
 }
 function circleHover(){
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 13; i++) {
         $('.timeline-block__circle').eq(i).mouseover(function(event){
             $('.timeline-block__circle').eq(i).css({'transform':'scale(1.2)'});
             $('.timeline-block__date').eq(i).css({'opacity':'0.4'});
