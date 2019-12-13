@@ -190,70 +190,76 @@
     }
 }
 @media (max-width: 600px){
-    .timeline-block__empty{
-        position: absolute;
-        top: -150px;
-    }
-    .timeline-container{
-        padding-top: 200px;
-    }
-    .timeline-block__middle{
-        width: 80px;
-        position: absolute;
-        left: 0;
-    }
-    .timeline-block__none_left{
-        display: none;
-    }
-    .timeline-block__none_right{
-        display: none;
-    }
-    .timeline__description{
-        position: relative;
-        width: 100%;    
-        padding-right: 0;
-        margin-left: 80px;
-        text-align: left;
-        padding-left: 0;
-        &::before{
-            content: '';
-            position: absolute;
-            width: 1px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
-            left: calc(-40.5px);
+    .timeline{
+        &-container{
+            padding-top: 200px;
         }
-    }
-    .timeline-skills_left{
-        justify-content: flex-start;
-    }
-    .timeline-skills__item_left{
-        margin-left: 0;
-        margin-right: 10px;
-    }
-    .timeline-year{
-        width: 50%;
-        justify-content: flex-start;
-    }
-    .timeline-block{
-        &__horizontal-line{
-            left: calc(50% + 0.5px);
-            width: 40%;
-            &_left{
-                right: 0;
+        &-block{
+            &__horizontal-line{
+                left: calc(50% + 0.5px);
+                width: 40%;
+                &_left{
+                    right: 0;
+                }
+            }
+            &__vertical-line{
+                display: none;
+            }
+            &__empty{
+                position: absolute;
+                top: -150px;
+            }
+            &__middle{
+                width: 80px;
+                position: absolute;
+                left: 0;
+            }
+            &__none{
+                &_left{
+                    display: none;
+                }
+                &_right{
+                    display: none;
+                }
             }
         }
-        &__vertical-line{
-            display: none;
+        &__description{
+            position: relative;
+            width: 100%;    
+            padding-right: 0;
+            margin-left: 80px;
+            text-align: left;
+            padding-left: 0;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                left: calc(-40.5px);
+            }
         }
-    }
-    .timeline-year{
-        margin-left: 9.5px;
-        &__title{
-            margin-left: 19.5px;
+        &-skills{
+            &__item{
+                &_left{
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+            &_left{
+                justify-content: flex-start;
+            }
         }
-        &::after{
-            margin-left: 30px;
+        &-year{
+            width: 50%;
+            justify-content: flex-start;
+            margin-left: 9.5px;
+            &__title{
+                margin-left: 19.5px;
+            }
+            &::after{
+                margin-left: 30px;
+            }
         }
     }
 }
